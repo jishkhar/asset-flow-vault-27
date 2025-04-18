@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDown, Zap, Wallet, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -6,41 +5,13 @@ import { Button } from '@/components/ui/button';
 const Hero = () => {
   return (
     <section 
-      className="pt-28 pb-16 md:py-32 relative overflow-hidden bg-gradient-mesh"
+      className="pt-28 pb-16 md:py-32 relative overflow-hidden bg-gradient-to-br from-background via-background/95 to-background"
       aria-label="Hero Section"
     >
-      <div className="absolute inset-0 bg-softWhite opacity-70"></div>
-      
-      {/* Animated particles */}
+      {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(15)].map((_, i) => (
-          <div 
-            key={i}
-            className="absolute rounded-full bg-teal/20 animate-float"
-            style={{
-              width: `${Math.random() * 30 + 5}px`,
-              height: `${Math.random() * 30 + 5}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${Math.random() * 10 + 10}s`
-            }}
-          ></div>
-        ))}
-        {[...Array(15)].map((_, i) => (
-          <div 
-            key={i}
-            className="absolute rounded-full bg-purple/20 animate-float"
-            style={{
-              width: `${Math.random() * 30 + 5}px`,
-              height: `${Math.random() * 30 + 5}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${Math.random() * 10 + 10}s`
-            }}
-          ></div>
-        ))}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative">

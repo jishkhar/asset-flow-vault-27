@@ -15,10 +15,10 @@ const FeatureCard = ({
   return (
     <div className="feature-card">
       <div className="w-12 h-12 mb-4 rounded-lg bg-gradient-cta/10 flex items-center justify-center">
-        <Icon className="text-purple" size={24} />
+        <Icon className="text-purple dark:text-teal" size={24} />
       </div>
-      <h3 className="text-lg font-montserrat font-semibold mb-2">{title}</h3>
-      <p className="text-navy/70">{description}</p>
+      <h3 className="text-lg font-montserrat font-semibold mb-2 dark:text-white">{title}</h3>
+      <p className="text-navy/70 dark:text-white/70">{description}</p>
     </div>
   );
 };

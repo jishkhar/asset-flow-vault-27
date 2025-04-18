@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Globe, Menu, X } from 'lucide-react';
@@ -20,17 +19,17 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
-        isScrolled ? 'frosted-glass py-3' : 'bg-transparent py-5'
+        isScrolled ? 'frosted-glass py-3 border-b border-border' : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center">
           <a href="#" className="flex items-center gap-2">
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-navy rounded-lg flex items-center justify-center mr-2">
+              <div className="w-8 h-8 bg-navy dark:bg-white rounded-lg flex items-center justify-center mr-2">
                 <span className="text-teal font-bold">UV</span>
               </div>
-              <span className="text-navy font-montserrat font-bold text-xl">UnityVault</span>
+              <span className="text-navy dark:text-white font-montserrat font-bold text-xl">UnityVault</span>
             </div>
           </a>
         </div>
