@@ -13,11 +13,11 @@ const FeatureCard = ({
   description: string 
 }) => {
   return (
-    <div className="feature-card">
+    <div className="p-6 rounded-lg bg-gradient-card dark:bg-navy/50 shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:scale-[1.02] hover:border-teal/30 border border-transparent dark:border-teal/10 dark:hover:border-teal/30">
       <div className="w-12 h-12 mb-4 rounded-lg bg-gradient-cta/10 flex items-center justify-center">
         <Icon className="text-purple dark:text-teal" size={24} />
       </div>
-      <h3 className="text-lg font-montserrat font-semibold mb-2 dark:text-white">{title}</h3>
+      <h3 className="text-lg font-montserrat font-semibold mb-2 text-navy dark:text-white">{title}</h3>
       <p className="text-navy/70 dark:text-white/70">{description}</p>
     </div>
   );
@@ -58,10 +58,10 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-16 md:py-24 bg-softWhite dark:bg-navy/30" aria-label="Features Section">
+    <section id="features" className="py-16 md:py-24 bg-softWhite dark:bg-navy/95" aria-label="Features Section">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Core Features</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-navy dark:text-white">Core Features</h2>
           <p className="text-lg text-navy/70 dark:text-white/70 max-w-2xl mx-auto">
             Our comprehensive suite of features transforms how assets are managed, transferred, and governed.
           </p>

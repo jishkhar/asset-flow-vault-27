@@ -6,17 +6,17 @@ const ProblemSolution = () => {
   return (
     <section 
       id="problem-solution" 
-      className="py-16 md:py-24 bg-softWhite relative overflow-hidden"
+      className="py-16 md:py-24 bg-softWhite dark:bg-navy/95 relative overflow-hidden"
       aria-label="Problem Solution Section"
     >
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-navy dark:text-white">
           Transforming <span className="text-purple">Traditional Finance</span> Challenges
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
           {/* Problem Panel */}
-          <div className="p-6 md:p-8 rounded-xl bg-gradient-to-br from-navy/5 to-navy/10 border border-subtleGray">
+          <div className="p-6 md:p-8 rounded-xl bg-gradient-to-br from-navy/5 to-navy/10 dark:from-purple/10 dark:to-teal/5 border border-subtleGray dark:border-white/10">
             <h3 className="text-2xl font-montserrat font-semibold mb-6 text-navy">
               Current Challenges
             </h3>
