@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Globe, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,14 +26,14 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="flex items-center">
               <div className="w-8 h-8 bg-navy dark:bg-white rounded-lg flex items-center justify-center mr-2">
                 <span className="text-teal font-bold">UV</span>
               </div>
               <span className="text-navy dark:text-white font-montserrat font-bold text-xl">UnityVault</span>
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -46,17 +48,16 @@ const Header = () => {
 
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
-          <div className="flex items-center gap-2">
-            <Globe size={16} className="text-navy/80 dark:text-white/80" />
-            <select className="bg-transparent text-sm cursor-pointer outline-none dark:text-white">
-              <option value="en">EN</option>
-              <option value="es">ES</option>
-              <option value="fr">FR</option>
-            </select>
-          </div>
-          <Button className="cta-button animate-pulse" onClick={() => window.open('#')}>
-            Launch App
-          </Button>
+          <Link to="/auth?mode=signin">
+            <Button variant="ghost" className="text-navy dark:text-white">
+              Sign In
+            </Button>
+          </Link>
+          <Link to="/auth?mode=signup">
+            <Button className="cta-button">
+              Sign Up
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -83,18 +84,16 @@ const Header = () => {
             <a href="#community" className="nav-link" onClick={() => setIsOpen(false)}>Community</a>
             <a href="#roadmap" className="nav-link" onClick={() => setIsOpen(false)}>Roadmap</a>
             
-            <div className="flex items-center gap-2 py-2">
-              <Globe size={16} className="text-navy/80 dark:text-white/80" />
-              <select className="bg-transparent text-sm cursor-pointer outline-none dark:text-white">
-                <option value="en">EN</option>
-                <option value="es">ES</option>
-                <option value="fr">FR</option>
-              </select>
-            </div>
-            
-            <Button className="cta-button w-full" onClick={() => window.open('#')}>
-              Launch App
-            </Button>
+            <Link to="/auth?mode=signin" className="w-full" onClick={() => setIsOpen(false)}>
+              <Button variant="ghost" className="w-full text-navy dark:text-white">
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/auth?mode=signup" className="w-full" onClick={() => setIsOpen(false)}>
+              <Button className="cta-button w-full">
+                Sign Up
+              </Button>
+            </Link>
           </div>
         </div>
       )}
