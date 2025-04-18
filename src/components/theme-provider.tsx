@@ -43,6 +43,7 @@ export function ThemeProvider({
     }
 
     root.classList.add(theme)
+    root.style.setProperty("--theme-transition", "true")
   }, [theme])
 
   const value = {
