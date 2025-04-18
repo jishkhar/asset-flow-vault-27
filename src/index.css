@@ -76,12 +76,20 @@
     @apply bg-background text-foreground antialiased;
   }
 
+  .dark body {
+    @apply text-white bg-navy;
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    @apply font-montserrat font-bold tracking-tight;
+    @apply font-montserrat font-bold tracking-tight dark:text-white;
+  }
+
+  p {
+    @apply dark:text-white/90;
   }
 
   code {
-    @apply font-jetbrains font-light;
+    @apply font-jetbrains font-light dark:text-white/90;
   }
 }
 
@@ -129,8 +137,7 @@
   .feature-card {
     @apply p-6 rounded-lg bg-gradient-card dark:bg-navy/50 shadow-card hover:shadow-card-hover 
            transition-all duration-300 transform hover:scale-[1.02] hover:border-teal/30 
-           border border-transparent dark:border-teal/10 dark:hover:border-teal/30 
-           dark:hover:bg-navy/60;
+           border border-transparent dark:border-teal/10 dark:hover:border-teal/30;
   }
 
   .text-underline-animation {
@@ -141,19 +148,11 @@
 
   .hex-card {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    @apply bg-gradient-card;
+    @apply bg-gradient-card dark:bg-navy/30;
   }
 
   .card-rise {
     @apply transition-all duration-300 hover:translate-y-[-5px];
-  }
-}
-
-/* Accessibility Styles */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.001ms !important;
-    transition-duration: 0.001ms !important;
   }
 }
 
@@ -174,5 +173,33 @@
   .gradient-border {
     background: linear-gradient(#121D33, #121D33) padding-box,
                 linear-gradient(45deg, #7B61FF, #05F0C9) border-box;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    @apply text-white/90;
+  }
+
+  a:not(.nav-link) {
+    @apply text-teal hover:text-teal/80;
+  }
+
+  input, textarea, select {
+    @apply bg-navy/50 border-white/10 text-white/90;
+  }
+
+  button:not(.cta-button):not(.cta-button-secondary) {
+    @apply text-white/90 hover:text-white;
+  }
+
+  .bg-white, .bg-softWhite {
+    @apply bg-navy/95;
+  }
+}
+
+/* Accessibility Styles */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
   }
 }
