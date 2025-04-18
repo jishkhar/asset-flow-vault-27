@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Building, Coins, ArrowLeftRight, Heart, VoteIcon, ChevronLeft, ChevronRight } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const UseCaseCard = ({ 
@@ -9,7 +10,7 @@ const UseCaseCard = ({
   description, 
   details 
 }: { 
-  icon: React.ComponentType<{ className?: string, size?: number }>, 
+  icon: LucideIcon,
   title: string, 
   description: string,
   details: string 

@@ -1,13 +1,14 @@
 
 import React from 'react';
 import { Building, Zap, Users, VoteIcon, Shield, Globe } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 const FeatureCard = ({ 
   icon: Icon, 
   title, 
   description 
 }: { 
-  icon: React.ComponentType<{ className?: string, size?: number }>, 
+  icon: LucideIcon,
   title: string, 
   description: string 
 }) => {

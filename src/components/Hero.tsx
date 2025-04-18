@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowDown, Lightning, Wallet, Clock } from 'lucide-react';
+import { ArrowDown, Zap, Wallet, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -57,7 +57,7 @@ const Hero = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               <div className="frosted-glass p-4 rounded-lg shadow-sm border border-subtleGray/30 card-rise">
                 <div className="flex items-center mb-2">
-                  <Lightning className="w-5 h-5 text-purple mr-2" />
+                  <Zap className="w-5 h-5 text-purple mr-2" />
                   <span className="font-montserrat font-semibold">Fast</span>
                 </div>
                 <p className="text-2xl font-bold text-navy">65,000 TPS</p>

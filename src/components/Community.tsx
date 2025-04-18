@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { MessagesSquare, Github, Twitter, Send, ArrowRight } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -11,7 +12,7 @@ const SocialLink = ({
   url 
 }: { 
   platform: string, 
-  icon: React.ComponentType<{ className?: string, size?: number }>, 
+  icon: LucideIcon,
   color: string,
   url: string
 }) => {
