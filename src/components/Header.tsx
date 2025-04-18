@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Globe, Menu, X } from 'lucide-react';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,9 +46,10 @@ const Header = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
           <div className="flex items-center gap-2">
-            <Globe size={16} className="text-navy/80" />
-            <select className="bg-transparent text-sm cursor-pointer outline-none">
+            <Globe size={16} className="text-navy/80 dark:text-white/80" />
+            <select className="bg-transparent text-sm cursor-pointer outline-none dark:text-white">
               <option value="en">EN</option>
               <option value="es">ES</option>
               <option value="fr">FR</option>
@@ -59,9 +61,10 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
           <button 
-            className="text-navy p-2"
+            className="text-navy dark:text-white p-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
@@ -72,7 +75,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full frosted-glass border-t border-subtleGray/30 animate-fade-in">
+        <div className="md:hidden absolute top-full left-0 w-full frosted-glass border-t border-subtleGray/30 animate-fade-in dark:bg-navy/90">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a href="#features" className="nav-link" onClick={() => setIsOpen(false)}>Features</a>
             <a href="#use-cases" className="nav-link" onClick={() => setIsOpen(false)}>Use Cases</a>
@@ -82,8 +85,8 @@ const Header = () => {
             <a href="#roadmap" className="nav-link" onClick={() => setIsOpen(false)}>Roadmap</a>
             
             <div className="flex items-center gap-2 py-2">
-              <Globe size={16} className="text-navy/80" />
-              <select className="bg-transparent text-sm cursor-pointer outline-none">
+              <Globe size={16} className="text-navy/80 dark:text-white/80" />
+              <select className="bg-transparent text-sm cursor-pointer outline-none dark:text-white">
                 <option value="en">EN</option>
                 <option value="es">ES</option>
                 <option value="fr">FR</option>
