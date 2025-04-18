@@ -74,7 +74,6 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -88,11 +87,11 @@
 
 @layer components {
   .frosted-glass {
-    @apply backdrop-blur-md bg-white/75 shadow-sm;
+    @apply backdrop-blur-md bg-white/75 dark:bg-navy/75 shadow-sm;
   }
 
   .nav-link {
-    @apply relative inline-block py-2 text-navy transition-colors hover:text-purple;
+    @apply relative inline-block py-2 text-navy dark:text-white/90 transition-colors hover:text-purple dark:hover:text-teal;
   }
 
   .nav-link::after {
@@ -105,11 +104,15 @@
   }
 
   .gradient-border {
-    position: relative;
-    border-radius: 8px;
+    @apply relative rounded-lg;
     background: linear-gradient(white, white) padding-box,
                 linear-gradient(45deg, #7B61FF, #05F0C9) border-box;
     border: 2px solid transparent;
+  }
+
+  .dark .gradient-border {
+    background: linear-gradient(#121D33, #121D33) padding-box,
+                linear-gradient(45deg, #7B61FF, #05F0C9) border-box;
   }
 
   .cta-button {
@@ -118,13 +121,16 @@
   }
 
   .cta-button-secondary {
-    @apply px-8 py-3 rounded-full font-montserrat font-semibold text-purple border-2 border-purple
-           transition-all duration-300 hover:bg-purple/5 transform hover:scale-105;
+    @apply px-8 py-3 rounded-full font-montserrat font-semibold text-purple dark:text-teal border-2 
+           border-purple dark:border-teal transition-all duration-300 hover:bg-purple/5 dark:hover:bg-teal/5 
+           transform hover:scale-105;
   }
   
   .feature-card {
-    @apply p-6 rounded-lg bg-gradient-card shadow-card hover:shadow-card-hover 
-           transition-all duration-300 transform hover:scale-[1.02] hover:border-teal/30 border border-transparent;
+    @apply p-6 rounded-lg bg-gradient-card dark:bg-navy/50 shadow-card hover:shadow-card-hover 
+           transition-all duration-300 transform hover:scale-[1.02] hover:border-teal/30 
+           border border-transparent dark:border-teal/10 dark:hover:border-teal/30 
+           dark:hover:bg-navy/60;
   }
 
   .text-underline-animation {

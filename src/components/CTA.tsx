@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 const CTA = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-navy/90 to-purple/80 text-white" aria-label="Call to Action Section">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-navy/90 to-purple/80 dark:from-purple/20 dark:to-navy/90 text-white" aria-label="Call to Action Section">
       <div className="container mx-auto px-4 md:px-6 relative">
         {/* Background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">

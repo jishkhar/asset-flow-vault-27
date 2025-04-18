@@ -58,11 +58,11 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-16 md:py-24 bg-softWhite" aria-label="Features Section">
+    <section id="features" className="py-16 md:py-24 bg-softWhite dark:bg-navy/30" aria-label="Features Section">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Core Features</h2>
-          <p className="text-lg text-navy/70 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Core Features</h2>
+          <p className="text-lg text-navy/70 dark:text-white/70 max-w-2xl mx-auto">
             Our comprehensive suite of features transforms how assets are managed, transferred, and governed.
           </p>
         </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MessagesSquare, Github, Twitter, ArrowRight } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -6,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-footer text-white" aria-label="Footer">
+    <footer className="bg-gradient-footer dark:bg-navy/95 text-white" aria-label="Footer">
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-1">
